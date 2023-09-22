@@ -21,10 +21,8 @@ for i in range(n_bit):
     server.sendline(str(c).encode())
     bit = int(server.recvline().decode())
     if  bit == 1:
-        print("111")
         lower_bound = (upper_bound + lower_bound) // 2
     else:
-        print("000")
         upper_bound = (upper_bound + lower_bound) // 2
 
 print(int(upper_bound))
